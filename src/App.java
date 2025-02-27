@@ -10,5 +10,21 @@ import java.util.*;
 public class App {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
+        int num = Integer.valueOf(scanner.nextLine());
+        int high = 0;
+        int low = 1000000000;
+        while (num != -1 && num < 105) {
+            num = Integer.valueOf(scanner.nextLine());
+            if (num > high) {
+                high = num;
+            }else if (num == -1) {
+                break;
+            }
+            if (num < low) {
+                low = num;
+            }            }
+            System.out.println("The high score was: " + high);
+            System.out.println("The lowest score was: " + low);
+        }
     }
-}
+
